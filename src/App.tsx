@@ -1,4 +1,4 @@
-import { Dashboard,} from "./components/index"
+import { Dashboard} from "./components/index"
 
 
 function App() {

@@ -1,14 +1,22 @@
-import Layout from "@/components/layout"
+
+import React from 'react';
+import Layout from '../../layout';
+import BorrowerCard from '../../subcomponents/borrowercard';
+
 
 const Dashboard = () => {
   return (
     <Layout>
-      <div className="p-4">
-        <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
-        <p>Welcome to the dashboard! Here you can manage your application.</p>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-1">
+          <BorrowerCard />
+        </div>
+         <div className="lg:col-span-1">
+          sadfadfadfad
+        </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

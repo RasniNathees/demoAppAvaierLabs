@@ -1,32 +1,82 @@
-export const mockBorrowerDetails = {
-  "1": {
-    id: "1", name: "Sarah Dunn", email: "sarah.dunn@example.com", phone: "(355)123-4557",
-    loan_amount: 300000, status: "In Review", employment: "At Tech Company", income: 120000,
-    existing_loan: 240000, credit_score: 720, source_of_funds: "Declared",
-    risk_signal: "Missing Source of Funds declaration",
-    ai_flags: ["Income Inconsistent with Bank statements", "High Debt-to-Income Ratio detected"]
+export const mockAPI = {
+  borrowers: {
+    pipeline: {
+      new: [
+        { id: "1", name: "Sarah Dunn", loan_type: "Home Loan", amount: 300000, status: "Renew" },
+        { id: "3", name: "Lisa Carter", loan_type: "Home Loan", amount: 450000, status: "New" }
+      ],
+      in_review: [
+        { id: "2", name: "Alan Matthews", loan_type: "Personal Loan", amount: 20000, status: "In Review" }
+      ],
+      approved: []
+    },
+    details: {
+      "1": {
+        id: "1", 
+        name: "Sarah Dunn", 
+        email: "sarah.dunn@example.com", 
+        phone: "(355)123-4557",
+        loan_amount: 300000, 
+        status: "In Review", 
+        employment: "At Tech Company", 
+        income: 120000,
+        existing_loan: 240000, 
+        credit_score: 720, 
+        source_of_funds: "Declared",
+        risk_signal: "Missing Source of Funds declaration",
+        ai_flags: [
+          "Income Inconsistent with Bank statements", 
+          "High Debt-to-Income Ratio detected"
+        ]
+      },
+      "2": {
+        id: "2", 
+        name: "Alan Matthews", 
+        email: "alan.matthews@example.com", 
+        phone: "(355)987-6543",
+        loan_amount: 20000, 
+        status: "In Review", 
+        employment: "Self Employed", 
+        income: 60000,
+        existing_loan: 15000, 
+        credit_score: 680, 
+        source_of_funds: "Savings",
+        risk_signal: "Self-employment income verification required",
+        ai_flags: ["Employment verification pending"]
+      },
+      "3": {
+        id: "3", 
+        name: "Lisa Carter", 
+        email: "lisa.carter@example.com", 
+        phone: "(355)456-7890",
+        loan_amount: 450000, 
+        status: "New", 
+        employment: "Corporate Executive", 
+        income: 180000,
+        existing_loan: 0, 
+        credit_score: 780, 
+        source_of_funds: "Sale of Assets",
+        risk_signal: "High loan amount requires additional verification",
+        ai_flags: ["Asset verification required"]
+      }
+    }
   },
-  "2": {
-    id: "2", name: "Alan Matthews", email: "alan.matthews@example.com", phone: "(555)987-6543",
-    loan_amount: 20000, status: "In Review", employment: "Freelancer", income: 45000,
-    existing_loan: 0, credit_score: 680, source_of_funds: "Savings",
-    risk_signal: "Low credit score requires review",
-    ai_flags: ["Irregular income pattern detected"]
+  broker: { 
+    name: "Robert Turner", 
+    deals: 16, 
+    approval_rate: "75%", 
+    pending: 7660 
   },
-  "3": {
-    id: "3", name: "Lisa Carter", email: "lisa.carter@example.com", phone: "(555)456-7890",
-    loan_amount: 450000, status: "New", employment: "Manager at Corp", income: 85000,
-    existing_loan: 180000, credit_score: 750, source_of_funds: "Salary + Bonus",
-    risk_signal: "High loan-to-income ratio",
-    ai_flags: ["High Debt-to-Income Ratio detected"]
+  workflow: {
+    steps: [
+      "Deal Intake", 
+      "IDV & Credit Check", 
+      "Document Upload", 
+      "AI Validation", 
+      "Credit Committee", 
+      "Approval & Docs", 
+      "Funder Syndication"
+    ]
   }
 };
 
-export const mockBrokerInfo = {
-  name: "Robert Turner", deals: 16, approval_rate: "75%", pending: 7660
-};
-
-export const mockWorkflowSteps = [
-  "Deal Intake", "IDV & Credit Check", "Document Upload", "AI Validation",
-  "Credit Committee", "Approval & Docs", "Funder Syndication"
-];
