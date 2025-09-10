@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '../../layout';
 import BorrowerCard from '../../subcomponents/borrowercard';
-
+import BorrowerOverView from '../../subcomponents/borroweroverview';
 
 const Dashboard = () => {
   return (
@@ -12,7 +12,7 @@ const Dashboard = () => {
           <BorrowerCard />
         </div>
          <div className="lg:col-span-1">
-         
+         <BorrowerOverView/>
         </div>
       </div>
     </Layout>
