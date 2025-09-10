@@ -12,7 +12,7 @@ const Dashboard = () => {
           <BorrowerCard />
         </div>
          <div className="lg:col-span-1">
-          sadfadfadfad
+         
         </div>
       </div>
     </Layout>
