@@ -5,7 +5,7 @@ import { Badge } from "../ui/badge"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../ui/tabs"
 import { mockAPI } from "../../data/mockdata"
 
-const BorrowerCard = () => {
+const BorrowerCard:React.FC = () => {
   const { activeTab, setActiveTab, activeBorrowerId, setActiveBorrowerId } =
     useAppContext()
   const [radioValue, setRadioValue] = useState("active")

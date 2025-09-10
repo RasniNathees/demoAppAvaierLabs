@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../layout';
 import BorrowerCard from '../../subcomponents/borrowercard';
 import BorrowerOverView from '../../subcomponents/borroweroverview';
-
+import BrokerOverview from '../../subcomponents/brokeroverview';
 const Dashboard = () => {
   return (
     <Layout>
@@ -13,6 +13,9 @@ const Dashboard = () => {
         </div>
          <div className="lg:col-span-1">
          <BorrowerOverView/>
+        </div>
+         <div className="lg:col-span-1">
+         <BrokerOverview/>
         </div>
       </div>
     </Layout>

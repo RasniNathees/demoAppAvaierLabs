@@ -6,9 +6,7 @@ import { Badge } from "../ui/badge"
 import { Accordion } from "../ui/accordion"
 import { Button } from "../ui/button"
 import { mockAPI } from "../../data/mockdata"
-import {
-    Alert, AlertDescription, AlertTitle,
-} from "../ui/alert"
+import {Alert, AlertDescription, AlertTitle,} from "../ui/alert"
 import { CheckCircle2Icon } from "lucide-react"
 
 const BorrowerOverView: React.FC = () => {
